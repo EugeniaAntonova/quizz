@@ -358,12 +358,18 @@
 
         @keyframes radar {
             0% {
-                outline: 0px solid var(--outline-col);
+                outline: 10px solid transparent;
+                outline-offset: -10px;
             }
-            10%, 100% {
-                outline-color: transparent;
-                outline-width: 10px;
+            10% {
+                outline-color: var(--outline-col);
+                outline-width: 1px;
                 outline-offset: 10px;
+            }
+
+            11%, 100% {
+                outline-width: 0px;
+                outline-color: transparent;
             }
         }
 
